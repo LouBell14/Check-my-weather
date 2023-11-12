@@ -18,12 +18,19 @@ function refreshWeather(response) {
 }
 
 function formatDate(date) {
-  let day = day.getDay();
   let minutes = date.getMinutes();
   let hours = date.getHours();
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  
-  get day = days[date.getDay()];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
   return `${day} ${hours} :${minutes}`;
 }
 
