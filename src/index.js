@@ -2,7 +2,7 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
-  console.log(response.data);
+  console.log(response.data.condition.decription);
   cityElement.innerHTML = response.data.city;
 
   temperatureElement.innerHTML = Math.round(temperature);
